@@ -1,0 +1,225 @@
+:root {
+    --radialMenuBg: #f2f5ffe7;
+    --radialMenuSelector: #F2F5FF99;
+    --radialMenuText: #002e51d9;
+    --radialMenuCircleBase: #98969b80;
+    --radialMenuCircleHover: #1e356fd0;
+    --radialMenuItemBase: #05B4FF90;
+    --radialMenuItemHover: #05B4FFAA;
+}
+
+* {
+    font-family: Geist, sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Geist;
+    src: url(geist.ttf);
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.content {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.1fr 1fr 0.1fr;
+    grid-template-columns: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.background {
+    background-color: rgb(189, 189, 189);
+    z-index: 0;
+    border-top: 5px lightblue;
+    min-height: 0;
+}
+
+.headerContainer {
+    text-align: center;
+    background-color: rgb(83, 114, 193);
+    border-bottom: 3px solid white;
+}
+
+
+.openSlidesButton {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(233, 233, 233, 0.96);
+    border: 2px solid rgb(123 181 246 / 0.96);
+    border-radius: 50%;
+    padding: 1%;
+    font-size: clamp(18px, 2.5vmin, 24px);
+    width: 1vmin;
+    min-width: 2%;
+    display: flex;
+    min-height: 2%;
+    margin: 0.5%;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    text-align: center;
+    align-content: center;
+    color: black;
+    user-select: none;
+    transition: 0.25s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+.openSlidesButton:hover {
+    background-color: rgb(59, 84, 113);
+    border-color: rgb(59, 84, 113);
+    transform: scale(1.1);
+}
+
+.openSlidesButton:active {
+    transform: scale(1.1);
+    background-color: rgb(59, 84, 113);
+    border-color: rgb(59, 84, 113);
+}
+
+.topHeader {
+    font-weight: 200;
+    color: white;
+    font-size: clamp(20px, 41px, 46px);
+    margin: 0;
+}
+
+.timeTicker {
+    font-weight: 200;
+    color: white;
+    font-size: clamp(19px, 3vmin, 34px);
+    margin: 0;
+}
+
+/* News Stuff */
+
+.newsTicker {
+    color: white;
+    padding: 11px;
+    font-weight: 200;
+}
+
+.newsText {
+    font-size: clamp(17px, 3vmin, 34px);
+    margin: 0;
+    float: left;
+}
+
+.newsHeader {
+    font-size: clamp(22px, 5vmin, 44px);
+    margin: 0;
+}
+
+.newsImage {
+    border-radius: 7px;
+    border: 4px solid #444e9c;
+    margin-right: auto;
+    width: 64vmin;
+    height: 36vmin;
+    float: right;
+}
+
+/* News Stuff Ends */
+
+.baseContent {
+    position: relative;
+    border-radius: 6px;
+    background-color: #98a3e1;
+    width: 95%;
+    height: 90%;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: 0.3s ease;
+    /* height: inherit; */
+}
+
+.forceClassesGrid {
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    place-items: center;
+}
+
+.smallProp {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.forceTransition {
+    transition: 0.25s ease;
+}
+
+.lineBreak {
+    height: 1%;
+    width: 100%;
+    background-color: #277ec1d9;
+    margin-bottom: 0.5%;
+    border-radius: 50% 1000% 1000% 50%;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    background-color: #277ec1d9;
+    border-top: 3px solid white;
+}
+
+.footerAligner {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 55%;
+    background-color: #798dff;
+    border-radius: 6px;
+}
+
+.footerButton {
+    height: 65%;
+    width: 20%;
+    background-color: #5e6cd3;
+    color: #ffffff;
+    margin-left: 1%;
+    margin-right: 1%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 9px;
+    border-radius: 5px;
+    min-width: 0;
+    transition: 0.25s ease;
+}
+
+.footerButtonText {
+    font-size: clamp(11px, 3vmin, 18px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footerButton:hover {
+    background-color: #444e9c;
+    cursor: pointer;
+    text-decoration: underline;
+    transform: scale(1.1);
+}
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

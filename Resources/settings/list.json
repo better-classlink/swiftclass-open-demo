@@ -1,0 +1,11 @@
+[
+    {
+        "header": "Class Control",
+        "name": "Number of Scheduled Blocks",
+        "type": "slider",
+        "description": "Sets the number of block types in a block schedule system. If you don't have a block schedule, keep this at 1.",
+        "minval": "1",
+        "maxval": "4",
+        "value": "1"
+    }
+]

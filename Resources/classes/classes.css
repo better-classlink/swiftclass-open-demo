@@ -1,0 +1,335 @@
+.classesHeaderContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+    height: fit-content;
+    background-color: rgb(189 189 189);
+    margin-bottom: 2%;
+    border-radius: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.noteText {
+    font-size: clamp(14px, 2vmin, 24px);
+    user-select: none;
+    margin: 1%;
+    white-space: nowrap;
+}
+
+.buttonStacker {
+    background-color: rgb(43, 63, 76);
+    height: fit-content;
+    color: white;
+    width: fit-content;
+    min-width: 40%;
+    padding: 4% 0 4% 0;
+    text-align: center;
+    margin: 1%;
+    font-size: clamp(17px, 2vmin, 30px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    border-radius: 5px;
+    border: transparent;
+    transition: 0.25s ease;
+    transform-origin: left;
+}
+
+.buttonStacker:hover {
+    background-color: rgb(67, 99, 120);
+    cursor: pointer;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+
+.buttonStacker:active {
+    background: linear-gradient(90deg, rgb(131, 155, 243) 0%, rgb(148, 154, 245) 100%);
+}
+
+.contextMenu {
+    position: absolute;
+    background-color: rgb(83 109 165 / 0.76);
+    border: 2px solid rgb(123 181 246 / 0.96);
+    border-radius: 5px;
+    padding: 1%;
+    width: 40%;
+    height: fit-content;
+    min-height: 25%;
+    aspect-ratio: 16/9;
+    transition: 0.25s ease;
+    overflow-y: auto;
+}
+
+.contextMenu.small {
+    transform: scale(0.95);
+    opacity: 0;
+}
+
+.contextMenu.large {
+    transform: scale(1.2);
+}
+
+.contextButton {
+    background-color: rgb(123 181 246 / 0.96);
+    border: 2px solid rgb(123 181 246 / 0.96);
+    border-radius: 3px;
+    padding: 1%;
+    font-size: clamp(8px, 2.5vmin, 24px);
+    width: fit-content;
+    min-width: 10%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: fit-content;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    user-select: none;
+    transition: 0.25s ease;
+    transform-origin: left;
+}
+
+.contextButton:hover {
+    background-color: rgb(59, 84, 113);
+    border-color: rgb(59, 84, 113);
+    text-decoration: underline;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+.contextTitle {
+    font-size: clamp(18px, 2.5vmin, 44px);
+    text-overflow: ellipsis;
+    color: white;
+    font-weight: 500;
+    user-select: none;
+    margin-bottom: 1%;
+    text-align: center;
+    background-color: rgba(96, 101, 237, 0.195);
+    border-radius: 2px;
+}
+
+.classesCloseButton {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(123 181 246 / 0.96);
+    border: 2px solid rgb(123 181 246 / 0.96);
+    border-radius: 3px;
+    padding: 1%;
+    font-size: clamp(18px, 2.5vmin, 24px);
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    aspect-ratio: 1/1;
+    text-align: center;
+    align-content: center;
+    user-select: none;
+    transition: 0.25s ease;
+}
+
+.classesCloseButton:hover {
+    background-color: rgb(59, 84, 113);
+    border-color: rgb(59, 84, 113);
+}
+
+.contextInput {
+    width: 100%;
+    padding: 1%;
+    margin: 1% 0;
+    border-radius: 5px;
+    border: none;
+    font-size: clamp(4px, 2vmin, 24px);
+}
+
+.contextInput::placeholder {
+    font-size: clamp(4px, 2vmin, 24px);
+}
+
+.classesStack {
+    border-radius: 4px;
+    width: 90%;
+    height: 90%;
+    padding: 1%;
+    min-height: 30%;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: rgba(192, 201, 231, 0.96);
+}
+
+.classesPane {
+    border-radius: 4px;
+    width: 90%;
+    height: 90%;
+    padding: 1%;
+    min-height: 30%;
+    overflow: hidden;
+    overflow-y: hidden;
+    color: black;
+    background-color: rgba(192, 201, 231, 0.96);
+    display: grid;
+    grid-template-rows: 0.6fr 1.4fr;
+}
+
+.classesTitle {
+    font-size: clamp(18px, 2.5vmin, 32px);
+    color: rgb(78, 78, 78);
+    font-weight: 500;
+    user-select: none;
+    margin-bottom: 1%;
+    text-align: center;
+    text-overflow: ellipsis;
+    /* background-color: rgba(96, 101, 237, 0.195); */
+    border-radius: 2px;
+}
+
+.addButtonStacker {
+    background-color: rgb(43, 63, 76);
+    height: fit-content;
+    color: white;
+    width: fit-content;
+    min-width: 40%;
+    padding: 2% 0 2% 0;
+    text-align: center;
+    margin: 1%;
+    font-size: clamp(17px, 2vmin, 30px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+    border-radius: 5px;
+    border: transparent;
+    transition: 0.25s ease;
+    transform-origin: left;
+}
+
+.addButtonStacker:hover {
+    background-color: rgb(144, 170, 188);
+    cursor: pointer;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+
+.classHeader {
+    font-size: clamp(8px, 5vmin, 40px);
+    color: rgb(114, 187, 243);
+    font-weight: 500;
+    user-select: none;
+    margin-bottom: 1%;
+    text-align: center;
+    text-overflow: ellipsis;
+}
+
+.classTeacher {
+    font-size: clamp(8px, 2.5vmin, 32px);
+    color: rgb(74, 129, 171);
+    font-weight: 500;
+    user-select: none;
+    margin-bottom: 1%;
+    text-align: center;
+    text-overflow: ellipsis;
+    /* background-color: rgba(96, 101, 237, 0.195); */
+    /* margin-left: 0.5%; */
+    border-radius: 2px;
+}
+
+.noteHeaderText {
+    font-size: clamp(8px, 1.8vmin, 32px);
+    color: rgb(158, 194, 222);
+    font-weight: 500;
+    user-select: none;
+    margin-bottom: 1%;
+    text-align: center;
+    text-overflow: ellipsis;
+    /* background-color: rgba(96, 101, 237, 0.195); */
+    border-radius: 2px;
+}
+
+.noteHeaderLink {
+    font-size: clamp(12px, 1.8vmin, 32px);
+    color: rgb(164, 179, 212);
+    font-weight: 500;
+    user-select: none;
+    margin-bottom: 1%;
+    width: fit-content;
+    height: fit-content;
+    padding: 0.25%;
+    text-align: center;
+    text-overflow: ellipsis;
+    /* background-color: rgba(96, 101, 237, 0.195); */
+    border-radius: 2px;
+    background-color: rgb(45, 45, 87);
+    transition: ease 0.25s; 
+    cursor: pointer;
+    margin-top: 4%;
+}
+
+.noteHeaderLink:hover {
+    color: rgb(63, 113, 163);
+    background-color: rgb(197, 207, 215);
+}
+
+.classSettings {
+    position: relative;
+    background-color: rgb(215, 215, 215);
+    padding: 1%;
+    border-radius: 4px;
+    border: 3px solid rgb(175, 175, 175);
+    place-self: center;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+}
+
+.classInteract {
+    background-color: rgb(215, 215, 215);
+    padding: 1%;
+    border-radius: 4px;
+    border: 3px solid rgb(229, 229, 229);
+    place-self: center;
+    min-width: 90%;
+    min-height: 90%;
+    transition: ease 0.25s;
+}
+
+.classGeneric {
+    font-size: clamp(8px, 2.5vmin, 32px);
+    color: rgb(79, 131, 171);
+    font-weight: 500;
+    user-select: none;
+    margin-bottom: 2%;
+    text-align: center;
+    text-overflow: ellipsis;
+    /* background-color: rgba(96, 101, 237, 0.195); */
+}
+
+.contextButtonTweak {
+    background-color: rgb(123 181 246 / 0.96);
+    border-radius: 3px;
+    padding: 1%;
+    font-size: clamp(8px, 2.5vmin, 24px);
+    width: fit-content;
+    min-width: 10%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: fit-content;
+    cursor: pointer;
+    text-align: center;
+    align-content: center;
+    user-select: none;
+    transition: 0.25s ease;    
+    border: none;
+}
+
+.contextButtonTweak:hover {
+    background-color: rgb(59, 84, 113);
+    /* border-color: rgb(59, 84, 113); */
+    text-decoration: underline;
+    color: white;
+    transform: scale(1.02);
+}
